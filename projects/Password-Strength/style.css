@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 15px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #201f21;
+
+  & #message {
+    margin: 1em;
+    text-align: center;
+  }
+
+  & #container {
+    width: fit-content;
+    max-width: 300px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & #password {
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 10px;
+    }
+
+    & #showPassword {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    & #indicator {
+      border-left: 1px solid;
+      padding: 10px;
+    }
+  }
+}

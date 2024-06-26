@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #141a34;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 1em;
+
+  & #form {
+    background: #fff;
+    padding: 2.5em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.3s ease;
+
+    @media screen and (width<=500px) {
+      padding: 1em;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+    }
+
+    & #submit-error {
+      color: red;
+    }
+
+    & div {
+      width: 400px;
+      display: flex;
+      gap: 2em;
+      justify-content: space-between;
+      position: relative;
+      transition: 0.3s ease;
+
+      @media screen and (width <= 500px) {
+        flex-direction: column;
+        gap: 1em;
+        padding-inline: 1em;
+        width: 300px;
+      }
+
+      & span {
+        position: absolute;
+        font-size: 13px;
+        bottom: 12px;
+        right: 0;
+        color: red;
+        transition: 0.3s ease;
+
+        @media screen and (width <= 500px) {
+          right: 1em;
+        }
+
+        & i {
+          font-size: 17px;
+          color: green;
+        }
+      }
+
+      & > :is(input, textarea) {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #aaa;
+        width: 65%;
+        resize: none;
+        padding-bottom: 1em;
+      }
+
+      & > :is(#number) {
+        &::-webkit-inner-spin-button {
+          appearance: none;
+          -webkit-appearance: none;
+        }
+      }
+    }
+
+    & button {
+      padding: 0.8em 4em;
+      border-radius: 5px;
+      background: #141a34;
+      color: #fff;
+      border: none;
+      outline: none;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Product Cart</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Shows no. of Items in cart -->
+      <div id="cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-item">0</span>
+      </div>
+
+      <!-- Image Section -->
+      <div class="image-section">
+        <img src="./assets/silver-macbook-front.webp" />
+
+        <div class="list">
+          <button class="image-list silver active"></button>
+          <button class="image-list silver"></button>
+          <button class="image-list silver"></button>
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="detail-section">
+        <h1>Macbook</h1>
+
+        <h2 style="color: #ccc">$ <span id="price">900</span></h2>
+        <h3 style="color: #00f5d4">30% OFF</h3>
+        <p>
+          This Apple Macbook is powered by the Apple M1 chip and is easily
+          portable so that you can carry it with you anywhere you want.
+        </p>
+
+        <!-- Product Size -->
+        <div id="size">
+          <label>Size</label>
+          <div>
+            <button class="size small active">S</button>
+            <button class="size medium">M</button>
+            <button class="size large">L</button>
+          </div>
+        </div>
+
+        <!-- Product Color -->
+        <div class="product-color">
+          <label>Color</label>
+          <div id="color">
+            <button class="color silver active"></button>
+            <button class="color gold"></button>
+            <button class="color midnight"></button>
+          </div>
+        </div>
+
+        <!-- Product Quantity -->
+        <div class="quantity">
+          <label for="quantity">Quantity</label>
+          <input
+            type="number"
+            id="quantity"
+            onkeyup="updatePrice()"
+            placeholder="1"
+            max="10"
+            min="1"
+          />
+        </div>
+
+        <!-- Add to Cart and Buy Button -->
+        <button onclick="addItem()" id="add-to-cart">Add To Cart</button>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Code Editor</title>
+  </head>
+  <body>
+    <div class="container">
+      <label
+        ><i style="color: orangered" class="fa-brands fa-html5"></i> HTML</label
+      >
+      <textarea id="htmlCode" onkeyup="run()"></textarea>
+      <label
+        ><i style="color: dodgerblue" class="fa-brands fa-css3-alt"></i>
+        CSS</label
+      >
+      <textarea id="cssCode" onkeyup="run()"></textarea>
+      <label
+        ><i style="color: yellow" class="fa-brands fa-square-js"></i>
+        JavaScript</label
+      >
+      <textarea id="jsCode" onkeyup="run()"></textarea>
+    </div>
+    <div class="output">
+      <h1><i class="fa-solid fa-code"></i> Output</h1>
+      <iframe frameborder="0" id="output"></iframe>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Password Strength</title>
+  </head>
+  <body>
+    <div id="container">
+      <input type="password" id="password" placeholder="Password" />
+
+      <i id="showPassword" class="fa-solid fa-eye-slash"></i>
+
+      <i id="indicator" class="fa-solid fa-lock"></i>
+    </div>
+
+    <p id="message">Password is <span id="strength">Not entered</span></p>
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

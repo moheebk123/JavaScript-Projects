@@ -1,0 +1,541 @@
+[
+  {
+    "name": "afghanistan",
+    "countryData": {
+      "country": "Afghanistan",
+      "state": "Kabul",
+      "city": "Kabul",
+      "language": "Pashto, Dari",
+      "currency": "Afghan Afghani",
+      "flag": "./assets/afghanistan.png"
+    }
+  },
+  {
+    "name": "argentina",
+    "countryData": {
+      "country": "Argentina",
+      "state": "Buenos Aires",
+      "city": "Buenos Aires",
+      "language": "Spanish",
+      "currency": "Argentine Peso",
+      "flag": "./assets/argentina.png"
+    }
+  },
+  {
+    "name": "australia",
+    "countryData": {
+      "country": "Australia",
+      "state": "Canberra",
+      "city": "Sydney",
+      "language": "English",
+      "currency": "Australian Dollar",
+      "flag": "./assets/australia.png"
+    }
+  },
+  {
+    "name": "bangladesh",
+    "countryData": {
+      "country": "Bangladesh",
+      "state": "Dhaka",
+      "city": "Dhaka",
+      "language": "Bengali",
+      "currency": "Bangladeshi Taka",
+      "flag": "./assets/bangladesh.png"
+    }
+  },
+  {
+    "name": "bhutan",
+    "countryData": {
+      "country": "Bhutan",
+      "state": "Thimphu",
+      "city": "Thimphu",
+      "language": "Dzongkha",
+      "currency": "Bhutanese Ngultrum",
+      "flag": "./assets/bhutan.png"
+    }
+  },
+  {
+    "name": "brazil",
+    "countryData": {
+      "country": "Brazil",
+      "state": "Brasília",
+      "city": "Brasília",
+      "language": "Portuguese",
+      "currency": "Brazilian Real",
+      "flag": "./assets/brazil.png"
+    }
+  },
+  {
+    "name": "canada",
+    "countryData": {
+      "country": "Canada",
+      "state": "Ottawa",
+      "city": "Ottawa",
+      "language": "English, French",
+      "currency": "Canadian Dollar",
+      "flag": "./assets/canada.png"
+    }
+  },
+  {
+    "name": "china",
+    "countryData": {
+      "country": "China",
+      "state": "Beijing",
+      "city": "Beijing",
+      "language": "Mandarin",
+      "currency": "Chinese Yuan",
+      "flag": "./assets/china.png"
+    }
+  },
+  {
+    "name": "denmark",
+    "countryData": {
+      "country": "Denmark",
+      "state": "Copenhagen",
+      "city": "Copenhagen",
+      "language": "Danish",
+      "currency": "Danish Krone",
+      "flag": "./assets/denmark.png"
+    }
+  },
+  {
+    "name": "egypt",
+    "countryData": {
+      "country": "Egypt",
+      "state": "Cairo",
+      "city": "Cairo",
+      "language": "Arabic",
+      "currency": "Egyptian Pound",
+      "flag": "./assets/egypt.png"
+    }
+  },
+  {
+    "name": "finland",
+    "countryData": {
+      "country": "Finland",
+      "state": "Helsinki",
+      "city": "Helsinki",
+      "language": "Finnish, Swedish",
+      "currency": "Euro",
+      "flag": "./assets/finland.png"
+    }
+  },
+  {
+    "name": "france",
+    "countryData": {
+      "country": "France",
+      "state": "Paris",
+      "city": "Paris",
+      "language": "French",
+      "currency": "Euro",
+      "flag": "./assets/france.png"
+    }
+  },
+  {
+    "name": "germany",
+    "countryData": {
+      "country": "Germany",
+      "state": "Berlin",
+      "city": "Berlin",
+      "language": "German",
+      "currency": "Euro",
+      "flag": "./assets/germany.png"
+    }
+  },
+  {
+    "name": "iceland",
+    "countryData": {
+      "country": "Iceland",
+      "state": "Reykjavik",
+      "city": "Reykjavik",
+      "language": "Icelandic",
+      "currency": "Icelandic Krona",
+      "flag": "./assets/iceland.png"
+    }
+  },
+  {
+    "name": "india",
+    "countryData": {
+      "country": "India",
+      "state": "Delhi",
+      "city": "New Delhi",
+      "language": "Hindi",
+      "currency": "Rupee (₹)",
+      "flag": "./assets/india.png"
+    }
+  },
+  {
+    "name": "indonesia",
+    "countryData": {
+      "country": "Indonesia",
+      "state": "Jakarta",
+      "city": "Jakarta",
+      "language": "Indonesian",
+      "currency": "Rupiah",
+      "flag": "./assets/indonesia.png"
+    }
+  },
+  {
+    "name": "iran",
+    "countryData": {
+      "country": "Iran",
+      "state": "Tehran",
+      "city": "Tehran",
+      "language": "Persian",
+      "currency": "Iranian Rial",
+      "flag": "./assets/iran.png"
+    }
+  },
+  {
+    "name": "iraq",
+    "countryData": {
+      "country": "Iraq",
+      "state": "Baghdad",
+      "city": "Baghdad",
+      "language": "Arabic, Kurdish",
+      "currency": "Iraqi Dinar",
+      "flag": "./assets/iraq.png"
+    }
+  },
+  {
+    "name": "israel",
+    "countryData": {
+      "country": "Israel",
+      "state": "Jerusalem",
+      "city": "Tel Aviv",
+      "language": "Hebrew",
+      "currency": "Israeli New Shekel",
+      "flag": "./assets/israel.png"
+    }
+  },
+  {
+    "name": "italy",
+    "countryData": {
+      "country": "Italy",
+      "state": "Rome",
+      "city": "Rome",
+      "language": "Italian",
+      "currency": "Euro",
+      "flag": "./assets/italy.png"
+    }
+  },
+  {
+    "name": "japan",
+    "countryData": {
+      "country": "Japan",
+      "state": "Tokyo",
+      "city": "Tokyo",
+      "language": "Japanese",
+      "currency": "Yen",
+      "flag": "./assets/japan.png"
+    }
+  },
+  {
+    "name": "kuwait",
+    "countryData": {
+      "country": "Kuwait",
+      "state": "Kuwait City",
+      "city": "Kuwait City",
+      "language": "Arabic",
+      "currency": "Kuwaiti Dinar",
+      "flag": "./assets/kuwait.png"
+    }
+  },
+  {
+    "name": "malaysia",
+    "countryData": {
+      "country": "Malaysia",
+      "state": "Kuala Lumpur",
+      "city": "Kuala Lumpur",
+      "language": "Malay",
+      "currency": "Ringgit",
+      "flag": "./assets/malaysia.png"
+    }
+  },
+  {
+    "name": "maldives",
+    "countryData": {
+      "country": "Maldives",
+      "state": "Male",
+      "city": "Male",
+      "language": "Dhivehi",
+      "currency": "Maldivian Rufiyaa",
+      "flag": "./assets/maldives.png"
+    }
+  },
+  {
+    "name": "mexico",
+    "countryData": {
+      "country": "Mexico",
+      "state": "Mexico City",
+      "city": "Mexico City",
+      "language": "Spanish",
+      "currency": "Mexican Peso",
+      "flag": "./assets/mexico.png"
+    }
+  },
+  {
+    "name": "morocco",
+    "countryData": {
+      "country": "Morocco",
+      "state": "Rabat",
+      "city": "Casablanca",
+      "language": "Arabic, Berber",
+      "currency": "Moroccan Dirham",
+      "flag": "./assets/morocco.png"
+    }
+  },
+  {
+    "name": "nepal",
+    "countryData": {
+      "country": "Nepal",
+      "state": "Kathmandu",
+      "city": "Kathmandu",
+      "language": "Nepali",
+      "currency": "Nepalese Rupee",
+      "flag": "./assets/nepal.png"
+    }
+  },
+  {
+    "name": "netherlands",
+    "countryData": {
+      "country": "Netherlands",
+      "state": "Amsterdam",
+      "city": "Amsterdam",
+      "language": "Dutch",
+      "currency": "Euro",
+      "flag": "./assets/netherlands.png"
+    }
+  },
+  {
+    "name": "new zealand",
+    "countryData": {
+      "country": "New Zealand",
+      "state": "Wellington",
+      "city": "Auckland",
+      "language": "English, Māori",
+      "currency": "New Zealand Dollar",
+      "flag": "./assets/new zealand.png"
+    }
+  },
+  {
+    "name": "oman",
+    "countryData": {
+      "country": "Oman",
+      "state": "Muscat",
+      "city": "Muscat",
+      "language": "Arabic",
+      "currency": "Omani Rial",
+      "flag": "./assets/oman.png"
+    }
+  },
+  {
+    "name": "pakistan",
+    "countryData": {
+      "country": "Pakistan",
+      "state": "Islamabad",
+      "city": "Islamabad",
+      "language": "Urdu",
+      "currency": "Pakistani Rupee",
+      "flag": "./assets/pakistan.png"
+    }
+  },
+  {
+    "name": "philippines",
+    "countryData": {
+      "country": "Philippines",
+      "state": "Manila",
+      "city": "Manila",
+      "language": "Filipino, English",
+      "currency": "Philippine Peso",
+      "flag": "./assets/phillipines.png"
+    }
+  },
+  {
+    "name": "qatar",
+    "countryData": {
+      "country": "Qatar",
+      "state": "Doha",
+      "city": "Doha",
+      "language": "Arabic",
+      "currency": "Qatari Riyal",
+      "flag": "./assets/qatar.png"
+    }
+  },
+  {
+    "name": "russia",
+    "countryData": {
+      "country": "Russia",
+      "state": "Moscow",
+      "city": "Moscow",
+      "language": "Russian",
+      "currency": "Russian Ruble",
+      "flag": "./assets/russsia.png"
+    }
+  },
+  {
+    "name": "saudi arabia",
+    "countryData": {
+      "country": "Saudi Arabia",
+      "state": "Riyadh",
+      "city": "Riyadh",
+      "language": "Arabic",
+      "currency": "Saudi Riyal",
+      "flag": "./assets/saudi arabia.png"
+    }
+  },
+  {
+    "name": "singapore",
+    "countryData": {
+      "country": "Singapore",
+      "state": "Singapore",
+      "city": "Singapore",
+      "language": "English, Malay, Mandarin, Tamil",
+      "currency": "Singapore Dollar",
+      "flag": "./assets/singapore.png"
+    }
+  },
+  {
+    "name": "south africa",
+    "countryData": {
+      "country": "South Africa",
+      "state": "Pretoria",
+      "city": "Johannesburg",
+      "language": "Afrikaans",
+      "currency": "South African Rand",
+      "flag": "./assets/south africa.png"
+    }
+  },
+  {
+    "name": "south korea",
+    "countryData": {
+      "country": "South Korea",
+      "state": "Seoul",
+      "city": "Seoul",
+      "language": "Korean",
+      "currency": "South Korean Won",
+      "flag": "./assets/south korea.png"
+    }
+  },
+  {
+    "name": "spain",
+    "countryData": {
+      "country": "Spain",
+      "state": "Madrid",
+      "city": "Madrid",
+      "language": "Spanish",
+      "currency": "Euro",
+      "flag": "./assets/spain.png"
+    }
+  },
+  {
+    "name": "sri lanka",
+    "countryData": {
+      "country": "Sri Lanka",
+      "state": "Colombo",
+      "city": "Colombo",
+      "language": "Sinhala, Tamil",
+      "currency": "Sri Lankan Rupee",
+      "flag": "./assets/sri lanka.png"
+    }
+  },
+  {
+    "name": "sweden",
+    "countryData": {
+      "country": "Sweden",
+      "state": "Stockholm",
+      "city": "Stockholm",
+      "language": "Swedish",
+      "currency": "Swedish Krona",
+      "flag": "./assets/sweden.png"
+    }
+  },
+  {
+    "name": "switzerland",
+    "countryData": {
+      "country": "Switzerland",
+      "state": "Bern",
+      "city": "Zurich",
+      "language": "German, French, Italian, Romansh",
+      "currency": "Swiss Franc",
+      "flag": "./assets/switzerland.png"
+    }
+  },
+  {
+    "name": "thailand",
+    "countryData": {
+      "country": "Thailand",
+      "state": "Bangkok",
+      "city": "Bangkok",
+      "language": "Thai",
+      "currency": "Thai Baht",
+      "flag": "./assets/thailand.png"
+    }
+  },
+  {
+    "name": "turkey",
+    "countryData": {
+      "country": "Turkey",
+      "state": "Ankara",
+      "city": "Istanbul",
+      "language": "Turkish",
+      "currency": "Turkish Lira",
+      "flag": "./assets/turkey.png"
+    }
+  },
+  {
+    "name": "uae",
+    "countryData": {
+      "country": "United Arab Emirates",
+      "state": "Abu Dhabi",
+      "city": "Dubai",
+      "language": "Arabic",
+      "currency": "UAE Dirham",
+      "flag": "./assets/uae.png"
+    }
+  },
+  {
+    "name": "usa",
+    "countryData": {
+      "country": "United States of America",
+      "state": "Washington, D.C.",
+      "city": "Washington, D.C.",
+      "language": "English",
+      "currency": "US Dollar",
+      "flag": "./assets/usa.png"
+    }
+  },
+  {
+    "name": "vietnam",
+    "countryData": {
+      "country": "Vietnam",
+      "state": "Hanoi",
+      "city": "Ho Chi Minh City",
+      "language": "Vietnamese",
+      "currency": "Vietnamese Dong",
+      "flag": "./assets/vietnam.png"
+    }
+  },
+  {
+    "name": "yemen",
+    "countryData": {
+      "country": "Yemen",
+      "state": "Sanaa",
+      "city": "Sanaa",
+      "language": "Arabic",
+      "currency": "Yemeni Rial",
+      "flag": "./assets/yemen.png"
+    }
+  },
+  {
+    "name": "zimbabwe",
+    "countryData": {
+      "country": "Zimbabwe",
+      "state": "Harare",
+      "city": "Harare",
+      "language": "English, Shona, Sindebele",
+      "currency": "Zimbabwean Dollar",
+      "flag": "./assets/zimbabwe.png"
+    }
+  }
+]

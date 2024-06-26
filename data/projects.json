@@ -1,0 +1,206 @@
+[
+  {
+    "title": "Accordion",
+    "description": "Organizes content into collapsible sections with smooth animations."
+  },
+  {
+    "title": "Active-Scroll-Page",
+    "description": "Displays the active page and updates as users scroll or click on navbar links."
+  },
+  {
+    "title": "Age-Calculator",
+    "description": "Calculates a person's age based on their date of birth."
+  },
+  {
+    "title": "Calculator",
+    "description": "Performs basic arithmetic operations such as addition, subtraction, multiplication, and division."
+  },
+  {
+    "title": "Calender",
+    "description": "Display current date."
+  },
+  {
+    "title": "Character-Word-Counter",
+    "description": "Counts and displays the number of characters and words in a given text input."
+  },
+  {
+    "title": "Circular-Progress-Bar",
+    "description": "Displays progress visually in a circular format."
+  },
+  {
+    "title": "Code-Editor",
+    "description": "Provides a platform for writing and editing code like CodePen."
+  },
+  {
+    "title": "Counter-Animation",
+    "description": "Animates a counter that starts from 1 and increments up to specific number."
+  },
+  {
+    "title": "Country-Data",
+    "description": "Retrieves and displays information about countries based on user search input."
+  },
+  {
+    "title": "Degree-Converter",
+    "description": "Converts temperatures between Celsius and Fahrenheit."
+  },
+  {
+    "title": "Digital-Clock",
+    "description": "Displays the current time in a digital format, updating every second."
+  },
+  {
+    "title": "Drag-Drop",
+    "description": "Records and monitors personal expenses to help manage and track spending."
+  },
+  {
+    "title": "Expense-Tracker",
+    "description": "Have some issues. Functional will be Coming Soon."
+  },
+  {
+    "title": "Form-Validation",
+    "description": "Validates user input in forms and submits the data to a Google Sheet upon form submission."
+  },
+  {
+    "title": "Generate-Password",
+    "description": "Generates random and secure passwords with options to copy and paste the generated password for easy use."
+  },
+  {
+    "title": "Guess-Number",
+    "description": "Allows users to guess a randomly generated number and provides feedback on whether their guess is too high, too low, or correct."
+  },
+  {
+    "title": "Guess-Word",
+    "description": "Allows users to guess the name of a randomly selected technology or tech-related term, providing feedback on each guess."
+  },
+  {
+    "title": "Image-Gallery",
+    "description": "Not fully responsive. Responsive will be Coming Soon."
+  },
+  {
+    "title": "Image-Gallery-Website",
+    "description": "Hovering on a bar reveals a list, list hover changes the image, and hovering on the image or cross makes the image full screen."
+  },
+  {
+    "title": "Image-Slider",
+    "description": "Displays a series of images that users can navigate through by sliding left or right."
+  },
+  {
+    "title": "Japanese-Handicraft-Items",
+    "description": "Showcases a collection of Japanese handicraft items with an image slider and language options for English and Japanese."
+  },
+  {
+    "title": "Jokes",
+    "description": "Generates and displays random jokes upon request."
+  },
+  {
+    "title": "Keep-Notes",
+    "description": "Allows users to create, edit, and manage notes for personal organization."
+  },
+  {
+    "title": "Light-Bulb",
+    "description": "Light bulb with options to switch on and off light bulb."
+  },
+  {
+    "title": "Memory-Game",
+    "description": "A game where users match pairs of hidden cards by remembering their positions."
+  },
+  {
+    "title": "Menu-Text-Hover",
+    "description": "Colored menu text comes up on hover."
+  },
+  {
+    "title": "Modern-Menu",
+    "description": "Display image when hover or click on menu items."
+  },
+  {
+    "title": "Music-Player",
+    "description": "Some changes left. Functional will be Coming Soon."
+  },
+  {
+    "title": "Order-Button",
+    "description": "Displays an animated button that confirms an order has been placed when clicked."
+  },
+  {
+    "title": "Pagination",
+    "description": "Displays pagination numbers and updates the current page number dynamically."
+  },
+  {
+    "title": "Parallax-Scroll",
+    "description": "Implements a parallax scrolling effect where background images move slower than foreground content."
+  },
+  {
+    "title": "Password-Strength",
+    "description": "Evaluates and displays the strength of a password based on specified criteria."
+  },
+  {
+    "title": "Placeholder-Image",
+    "description": "Generates placeholder images with specific dimensions, background color, text color, and custom text, and includes a feature to copy the image link."
+  },
+  {
+    "title": "Product-Listing-Page",
+    "description": "Have some issues in product listing. Functional will be Coming Soon."
+  },
+  {
+    "title": "Product-Page",
+    "description": "Allows users to change product size, color, quantity, dynamically updates the price, adds selected quantity to the cart icon, and changes product images at intervals."
+  },
+  {
+    "title": "QR-Code",
+    "description": "Creates QR codes from user input text or URLs."
+  },
+  {
+    "title": "Quiz",
+    "description": "Presents a series of questions for users to answer and provides feedback on their responses and score after attending every question."
+  },
+  {
+    "title": "Rock-Paper-Seizor",
+    "description": "Allows users to play the classic game of Rock-Paper-Scissors against the computer."
+  },
+  {
+    "title": "Scroll-Animation",
+    "description": "Applies different animations to various headings, paragraphs and images as they scroll into view."
+  },
+  {
+    "title": "Scroll-Reveal",
+    "description": "Displays hidden boxes with randomly generated background colors when the user scrolls."
+  },
+  {
+    "title": "Search-Image",
+    "description": "Allows users to search for and display images based on input keywords."
+  },
+  {
+    "title": "Show-Image",
+    "description": "Displays a specific part of an image on hover."
+  },
+  {
+    "title": "Stopwatch",
+    "description": "Provides functionality to start, stop, reset, and save lap times during timing sessions."
+  },
+  {
+    "title": "Text-to-Voice",
+    "description": "Converts text input into spoken audio output using speech synthesis technology."
+  },
+  {
+    "title": "Thermometer",
+    "description": "Changes the thermometer icon to indicate increasing temperatures."
+  },
+  {
+    "title": "To-Do",
+    "description": "Enables users to create, manage, and track tasks in a to-do list format."
+  },
+  {
+    "title": "Toast-Notification",
+    "description": "Displays brief, auto-dismissible messages for success, invalid input, and error notifications."
+  },
+  {
+    "title": "Upload-Image",
+    "description": "Allows users to select and upload images from their device to set profile image."
+  },
+  {
+    "title": "Weather",
+    "description": "Retrieves and displays current weather conditions and forecasts for a searched city."
+  },
+  {
+    "title": "XML-HTTP-Request",
+    "description": "Retrieves and displays country data via an XML HTTP request."
+  }
+]

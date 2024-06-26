@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Light ON / OFF</title>
+  </head>
+  <body>
+    <div class="contaner">
+      <h2>Turn the light ON or OFF</h2>
+      <img src="./assets/light off.jpeg" width="200px" alt="light" id="image" />
+      <div class="button-container">
+        <button
+          onclick="document.getElementById('image').src='./assets/light on.jpeg'"
+        >
+          Turn ON light
+        </button>
+        <button
+          onclick="document.getElementById('image').src='./assets/light off.jpeg'"
+        >
+          Turn OFF light
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

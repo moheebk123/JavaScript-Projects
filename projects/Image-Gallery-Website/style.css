@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list:hover + #cursor {
+  transform: scale(0.5);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #a279fa;
+  overflow: hidden;
+
+  & #cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    background: #5e31be;
+    display: none;
+    transform: scale(1);
+    pointer-events: none;
+    transition: 0.3s ease-out;
+  }
+
+  & #menu {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    background: transparent;
+    padding: 5px;
+    transition: 1s;
+    z-index: 10;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  & #img-box {
+    & img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 2;
+      transition: 0.3s ease;
+    }
+  }
+
+  & .width-height {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  & .small {
+    position: absolute;
+    z-index: 100;
+    transition: 1s;
+    left: 20%;
+    top: 19%;
+    width: 40vw;
+    height: 60vh;
+    transform: perspective(600px) rotateX(-1.98deg) rotateY(15.99deg)
+      scale3d(1, 1, 1);
+
+    & .shadow1 {
+      transition: 1.7s;
+      position: absolute;
+      top: 10%;
+      left: -6%;
+      width: 30%;
+      height: 80%;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    & .shadow2 {
+      transition: 1.3s;
+      position: absolute;
+      top: 16%;
+      left: -11%;
+      width: 30%;
+      height: 68%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  & .list {
+    width: 30%;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    & div {
+      cursor: pointer;
+      margin-top: 1em;
+      width: fit-content;
+      font-size: 30px;
+      font-weight: 600;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #fff;
+      transition: 0.3s ease;
+
+      &:hover {
+        -webkit-text-fill-color: #fff;
+        transform: translateY(-5px);
+        z-index: 3;
+      }
+    }
+  }
+}

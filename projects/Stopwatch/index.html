@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="time">
+        <span id="hour">00</span> : <span id="minute">00</span> :
+        <span id="second">00</span>
+      </div>
+
+      <div class="buttons">
+        <button id="save-time" class="btn">
+          <i class="fa-solid fa-database"></i>
+        </button>
+
+        <button id="start" class="btn start">
+          <i class="fa-solid fa-play"></i>
+        </button>
+
+        <button id="reset" class="btn">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+      </div>
+    </div>
+    <h2>Records</h2>
+    <div id="stopwatch-record"></div>
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <div class="container">
+      <div class="search-city">
+        <input
+          type="text"
+          id="input-city"
+          placeholder="Enter City Name"
+          spellcheck="false"
+        />
+        <i id="search" class="fa-solid fa-search"></i>
+      </div>
+
+      <div class="weather-icon">
+        <img id="weather-icon" src="./assets/clear.svg" alt="weather" />
+      </div>
+
+      <div class="weather-degree"><span id="degree"></span> °C</div>
+
+      <div id="city"></div>
+
+      <div class="wind-humidity">
+        <div class="wind">
+          <div>
+            <i class="fa-solid fa-wind"></i>
+            <span id="wind"></span>km/h
+          </div>
+          <p>Wind Speed</p>
+        </div>
+        <div class="humidity">
+          <div>
+            <i class="fa-solid fa-water"></i>
+            <span id="humidity"></span>%
+          </div>
+          <p>Humidity</p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Degree Converter</title>
+  </head>
+  <body>
+    <form onsubmit="calculateTemp(); return false" id="tempCalc">
+      <p>Please enter the temperature you would like to convert.</p>
+      <input type="number" name="temp" id="temp" />
+      <select name="degree" id="degree">
+        <option value="cel">Celsius</option>
+        <option value="far">Fahrenheit</option>
+      </select>
+      <br /><br />
+      <input class="submit" type="submit" value="Submit" />
+      <p id="output"></p>
+    </form>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

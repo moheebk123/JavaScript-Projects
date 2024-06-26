@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: slategray;
+  overflow: hidden;
+}
+p {
+  font-size: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px #fff;
+}
+#temp {
+  text-shadow: none;
+}
+
+@media screen and (width <= 768px) {
+  p {
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,302 @@
+[
+    {
+        "title": "Samsung Galaxy S22 Ultra",
+        "price": 124999,
+        "rating": 5,
+        "brand": "Samsung",
+        "category": "Smartphones",
+        "image": "./asset/samsung-galaxy-s22-ultra.webp"
+    },
+    {
+        "title": "Apple iPhone 15",
+        "price": 80900,
+        "rating": 5,
+        "brand": "Apple",
+        "category": "Smartphones",
+        "image": "./asset/apple-iphone15.webp"
+    },
+    {
+        "title": "OPPO Reno10",
+        "price": 32999,
+        "rating": 5,
+        "brand": "OPPO",
+        "category": "Smartphones",
+        "image": "./asset/oppo-reno10.webp"
+    },
+    {
+        "title": "IQOO Z7 Pro",
+        "price": 27800,
+        "rating": 5,
+        "brand": "IQOO",
+        "category": "Smartphones",
+        "image": "./asset/iqoo-z7-pro.webp"
+    },
+    {
+        "title": "Nothing Phone 2",
+        "price": 44999,
+        "rating": 5,
+        "brand": "Nothing",
+        "category": "Smartphones",
+        "image": "./asset/nothing-phone2.webp"
+    },
+    {
+        "title": "Infinix GT10 Pro",
+        "price": 21999,
+        "rating": 4,
+        "brand": "Infinix",
+        "category": "Smartphones",
+        "image": "./asset/infinix-gt-10-pro.webp"
+    },
+    {
+        "title": "VIVO V29e",
+        "price": 26999,
+        "rating": 4,
+        "brand": "VIVO",
+        "category": "Smartphones",
+        "image": "./asset/vivo-v29-e.webp"
+    },
+    {
+        "title": "POCO X5 Pro",
+        "price": 22999,
+        "rating": 4,
+        "brand": "POCO",
+        "category": "Smartphones",
+        "image": "./asset/poco-x5-pro.webp"
+    },
+    {
+        "title": "Realme 11 Pro",
+        "price": 23999,
+        "rating": 4,
+        "brand": "Realme",
+        "category": "Smartphones",
+        "image": "./asset/realme11-pro.webp"
+    },
+    {
+        "title": "Motorola g84",
+        "price": 18999,
+        "rating": 4,
+        "brand": "Motorola",
+        "category": "Smartphones",
+        "image": "./asset/motorola-g84.webp"
+    },
+    {
+        "title": "Apple MackBook Pro M3",
+        "price": 199990,
+        "rating": 5,
+        "brand": "Apple",
+        "category": "Laptop",
+        "image": "./asset/apple-mackbook-pro-m3.webp"
+    },
+    {
+        "title": "Apple MackBook Pro M2 Max",
+        "price": 290990,
+        "rating": 5,
+        "brand": "Apple",
+        "category": "Laptop",
+        "image": "./asset/apple-mackbook-pro-m2-max.webp"
+    },
+    {
+        "title": "HP Athlon",
+        "price": 29990,
+        "rating": 5,
+        "brand": "HP",
+        "category": "Laptop",
+        "image": "./asset/hp-athlon.webp"
+    },
+    {
+        "title": "HP Pavillion",
+        "price": 84990,
+        "rating": 5,
+        "brand": "HP",
+        "category": "Laptop",
+        "image": "./asset/hp-pavilion.webp"
+    },
+    {
+        "title": "Lenovo IdeaPad 1 Athlon",
+        "price": 28640,
+        "rating": 5,
+        "brand": "Lenovo",
+        "category": "Laptop",
+        "image": "./asset/lenovo-ideapad-athlon.webp"
+    },
+    {
+        "title": "Lenovo IdeaPad Slim 3",
+        "price": 34990,
+        "rating": 4,
+        "brand": "Lenovo",
+        "category": "Laptop",
+        "image": "./asset/lenovo-ideapad-slim3.webp"
+    },
+    {
+        "title": "ASUS Vivobook 14",
+        "price": 33990,
+        "rating": 4,
+        "brand": "ASUS",
+        "category": "Laptop",
+        "image": "./asset/asus-vivobook14.webp"
+    },
+    {
+        "title": "ASUS TUF Gaming F15",
+        "price": 53990,
+        "rating": 4,
+        "brand": "ASUS",
+        "category": "Laptop",
+        "image": "./asset/asus-tuf-gaming.webp"
+    },
+    {
+        "title": "Acer Aspire 3",
+        "price": 44990,
+        "rating": 4,
+        "brand": "ACER",
+        "category": "Laptop",
+        "image": "./asset/acer-aspire3.webp"
+    },
+    {
+        "title": "Acer Extensa",
+        "price": 28990,
+        "rating": 4,
+        "brand": "ACER",
+        "category": "Laptop",
+        "image": "./asset/acer-extensa.webp"
+    },
+    {
+        "title": "Apple iMac M3 (Monitor, Keyboard, Mouse)",
+        "price": 154990,
+        "rating": 5,
+        "category": "Electronics",
+        "image": "./asset/desktop.webp"
+    },
+    {
+        "title": "Apple AirPods Pro 2nd Gen",
+        "price": 24400,
+        "rating": 5,
+        "category": "Electronics",
+        "image": "./asset/airdopes.webp"
+    },
+    {
+        "title": "Apple Watch",
+        "price": 26999,
+        "rating": 5,
+        "category": "Electronics",
+        "image": "./asset/watch.webp"
+    },
+    {
+        "title": "Rich Dad Poor Dad",
+        "price": 299,
+        "rating": 4,
+        "category": "Books",
+        "image": "./asset/rich-dad-poor-dad.webp"
+    },
+    {
+        "title": "The psycology of Money",
+        "price": 299,
+        "rating": 4,
+        "category": "Books",
+        "image": "./asset/the-physiology-of-money.webp"
+    },
+    {
+        "title": "Atomic Habits",
+        "price": 99,
+        "rating": 4,
+        "category": "Books",
+        "image": "./asset/atomic-habits.webp"
+    },
+    {
+        "title": "Think and Grow Rich",
+        "price": 249,
+        "rating": 4,
+        "category": "Books",
+        "image": "./asset/think-and-grow-rich.webp"
+    },
+    {
+        "title": "48 Laws of Power",
+        "price": 209,
+        "rating": 4,
+        "category": "Books",
+        "image": "./asset/48-laws-of-power.webp"
+    },
+    {
+        "title": "T-Shirt",
+        "price": 239,
+        "rating": 4,
+        "category": "Fashion",
+        "image": "./asset/t-shirt.webp"
+    },
+    {
+        "title": "Jeans",
+        "price": 449,
+        "rating": 4,
+        "category": "Fashion",
+        "image": "./asset/jeans.webp"
+    },
+    {
+        "title": "Jacket",
+        "price": 799,
+        "rating": 4,
+        "category": "Fashion",
+        "image": "./asset/jacket.webp"
+    },
+    {
+        "title": "Sneakers",
+        "price": 599,
+        "rating": 4,
+        "category": "Fashion",
+        "image": "./asset/sneakers.webp"
+    },
+    {
+        "title": "Dress",
+        "price": 799,
+        "rating": 4,
+        "category": "Fashion",
+        "image": "./asset/dress.webp"
+    },
+    {
+        "title": "Heel Sandal",
+        "price": 349,
+        "rating": 4,
+        "category": "Fashion",
+        "image": "./asset/heels.webp"
+    },
+    {
+        "title": "Handbag",
+        "price": 289,
+        "rating": 4,
+        "category": "Fashion",
+        "image": "./asset/handbag.webp"
+    },
+    {
+        "title": "Bed",
+        "rating": 4,
+        "price": 11999,
+        "category": "Home-Decoration",
+        "image": "./asset/bed.webp"
+    },
+    {
+        "title": "Sofa",
+        "price": 2999,
+        "rating": 5,
+        "category": "Home-Decoration",
+        "image": "./asset/sofa.webp"
+    },
+    {
+        "title": "Clock",
+        "price": 299,
+        "rating": 4,
+        "category": "Home-Decoration",
+        "image": "./asset/clock.webp"
+    },
+    {
+        "title": "Wall Shelf",
+        "price": 799,
+        "rating": 5,
+        "category": "Home-Decoration",
+        "image": "./asset/wall-shelf.webp"
+    },
+    {
+        "title": "Curtain",
+        "price": 149,
+        "rating": 4,
+        "category": "Home-Decoration",
+        "image": "./asset/curtains.webp"
+    }
+]

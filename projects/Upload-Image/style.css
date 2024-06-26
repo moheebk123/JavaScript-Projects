@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #d1d1d1;
+}
+#card {
+  width: 400px;
+  background: #fff;
+  padding: 1em;
+  border-radius: 15px;
+  text-align: center;
+  color: #333;
+  display: grid;
+  place-content: center;
+}
+#card h1 {
+  font-weight: 600;
+  color: #000;
+}
+#card img {
+  width: 180px;
+  height: 180px;
+  margin: 30px auto;
+  border-radius: 50%;
+}
+label {
+  display: block;
+  width: 200px;
+  background: #e3362c;
+  color: #fff;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input {
+  display: none;
+}
+
+@media screen and (width <= 500px) {
+  #card {
+    width: inherit;
+    height: inherit;
+  }
+}

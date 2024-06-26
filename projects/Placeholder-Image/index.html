@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Placeholder Image Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Generate Placeholder Image</h2>
+
+      <select>
+        <option value="150x50">Small (150x50)</option>
+        <option value="200x200">Medium Square (200x200)</option>
+        <option value="350x50">Medium (350x150)</option>
+        <option value="400x400">Large Square (400x400)</option>
+        <option value="650x350">Large (650x350)</option>
+        <option value="800x600">X-Large (800x600)</option>
+        <option value="1920x1080">Full HD (1920x1080)</option>
+      </select>
+
+      <div class="image-text">
+        <label for="image-text">Text on Image : </label>
+        <input type="text" id="image-text" />
+      </div>
+
+      <div class="background-color">
+        <label for="background-color">Choose Background Color : </label>
+        <input type="color" value="#5a5353" id="background-color" />
+      </div>
+
+      <div class="text-color">
+        <label for="text-color">Choose Text Color : </label>
+        <input type="color" value="#fcfcfc" id="text-color" />
+      </div>
+
+      <p>Click on image or link-box to copy link</p>
+
+      <img src="" />
+
+      <p class="link-box" onclick="copyURL()" title="Click to copt url">
+        Link will be generated here
+      </p>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

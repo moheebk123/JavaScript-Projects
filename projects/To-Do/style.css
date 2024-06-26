@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(110deg, #1d489d, #637aab, #103783);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Content Box */
+  & .container {
+    max-width: 350px;
+    border-radius: 15px;
+    background: #fff;
+    padding: 2em 1.5em;
+
+    /* Heading */
+    & h2 {
+      color: midnightblue;
+      text-align: center;
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Task Input Section */
+    & .task-input {
+      background: #eee;
+      border-radius: 15px;
+      margin-block: 1em;
+
+      & input {
+        font-size: 18px;
+        border: none;
+        border-radius: 15px;
+        outline: none;
+        padding: 10px 20px;
+        background: transparent;
+        width: 100%;
+      }
+    }
+
+    & #task-box {
+      /* Task List */
+      & .list {
+        margin-block: 1em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        & .check {
+          /* background: orangered; */
+          width: 25px;
+          height: 24px;
+          border-radius: 50%;
+          border: none;
+          outline: none;
+          color: #fff;
+          background-color: #bbb;
+          padding: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #ccc;
+          }
+        }
+
+        & .task {
+          /* text-decoration:line-through; */
+          width: 100%;
+          margin-left: 15px;
+          cursor: pointer;
+        }
+
+        & .deletebtn {
+          border: none;
+          outline: none;
+          color: #444;
+          background: #fff;
+          width: 25px;
+          height: 24px;
+          padding: 5px;
+          border-radius: 50%;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+  }
+}

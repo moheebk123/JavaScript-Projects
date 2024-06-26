@@ -1,0 +1,10 @@
+[
+  {
+    "country": "India",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "language": "Hindi",
+    "currency": "Rupee",
+    "flag": "./assets/indian-flag.jpg"
+  }
+]

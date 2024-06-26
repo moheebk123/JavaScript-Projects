@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Generate Password</title>
+  </head>
+  <body>
+    <h1>Generate a <br /><span>Random Password</span></h1>
+    <div class="display">
+      <input disabled="true" type="text" id="password" placeholder="Password" />
+      <i
+        onclick="copyPassword()"
+        id="copy"
+        class="fa-solid fa-copy"
+        title="Copy"
+      ></i>
+    </div>
+    <button onclick="createPassword()" id="generate">
+      <i style="color: #fff" class="fa-solid fa-bolt"></i>Generate Password
+    </button>
+
+    <h1 id="paste-password">Paste Password Here</h1>
+    <input
+      type="text"
+      class="paste-password"
+      placeholder="Paste Password Here"
+      title="Paste"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

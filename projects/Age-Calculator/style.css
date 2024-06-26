@@ -1,0 +1,66 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#9bf8f4, #6f7bf7);
+  display: grid;
+  place-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  text-shadow: 1px 1px #103783;
+  font-size: 50px;
+  color: #103783;
+  text-align: center;
+}
+button {
+  background: yellow;
+  color: #555;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 17px;
+  cursor: pointer;
+}
+p {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+}
+p span {
+  font-weight: bold;
+  color: #103783;
+}
+.content {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 5px;
+  font-size: 17px;
+  outline: none;
+  border: none;
+}
+
+@media screen and (width <= 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 15px;
+  }
+}

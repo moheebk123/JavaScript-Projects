@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #023047;
+  background-repeat: no-repeat;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & .container {
+    padding: 2em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    border: 1px solid #fff;
+
+    @media screen and (width <= 500px) {
+      width: inherit;
+      height: inherit;
+      border: none;
+      border-radius: 0;
+
+      & p {
+        width: 100%;
+      }
+    }
+
+    & > :is(h2, div, p) {
+      color: #fff;
+      text-align: center;
+    }
+
+    & > :is(.image-text, .background-color, .text-color) {
+      align-self: flex-start;
+    }
+
+    & > :is(select, img) {
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    & h2 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #fff;
+    }
+
+    & select {
+      width: 100%;
+      font-size: 1em;
+      outline: none;
+    }
+
+    & input {
+      outline: none;
+      font-size: 1em;
+
+      &[type="color"] {
+        cursor: pointer;
+      }
+    }
+
+    & p {
+      height: fit-content;
+      width: 350px;
+      padding: 5px;
+      font-size: 1em;
+
+      &.link-box {
+        border: 1px solid #fff;
+        cursor: pointer;
+        font-size: 12px;
+      }
+    }
+  }
+}

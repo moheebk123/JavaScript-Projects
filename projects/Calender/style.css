@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(#103783, #9bafd9);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .container {
+    height: fit-content;
+    width: fit-content;
+    margin: 15em auto;
+    display: flex;
+    text-align: center;
+
+    .month-year {
+      background: rgba(255, 0, 0, 0.745);
+      color: white;
+      display: grid;
+      place-items: center;
+    }
+
+    .date-day {
+      background: rgba(255, 255, 255, 0.958);
+    }
+
+    .date-day,
+    .month-year {
+      padding: 3em 2em;
+
+      .date {
+        font-size: 80px;
+      }
+
+      .year,
+      .month {
+        font-size: 35px;
+      }
+
+      .day {
+        font-size: 25px;
+      }
+    }
+  }
+}

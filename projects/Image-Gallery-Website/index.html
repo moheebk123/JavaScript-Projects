@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Image Gallery Website</title>
+  </head>
+  <body>
+    <div id="cursor"></div>
+
+    <div class="width-height" id="img-box">
+      <div class="shadow1"></div>
+      <div class="shadow2"></div>
+      <img src="./assets/web-development.jpg" />
+    </div>
+    <div class="list">
+      <div
+        onmouseleave="cursor.style.transform = 'scale(1)'"
+        onmouseenter="website()"
+      >
+        WEBSITE
+      </div>
+      <div
+        onmouseleave="cursor.style.transform = 'scale(1)'"
+        onmouseenter="mobile()"
+      >
+        MOBILE APP
+      </div>
+      <div
+        onmouseleave="cursor.style.transform = 'scale(1)'"
+        onmouseenter="ai()"
+      >
+        Artificial Intelligence
+      </div>
+      <div
+        onmouseleave="cursor.style.transform = 'scale(1)'"
+        onmouseenter="blockchain()"
+      >
+        BLOCKCHAIN
+      </div>
+    </div>
+    <button
+      onmouseleave="cursor.style.transform = 'scale(1)'"
+      onmouseenter="cursor.style.transform = 'scale(0.5)'"
+      id="menu"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

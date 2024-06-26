@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <i class="fa-solid fa-bars" id="menu"></i>
+
+      <div id="music-list">
+        <div class="music">Mujhe Pyaar Hua Tha</div>
+        <div class="music">Mere Humsafar</div>
+      </div>
+
+      <div class="music-image">
+        <img src="./assets/image2.jpg" alt="image" />
+      </div>
+
+      <div id="music-name">Mujhe Pyaar Hua Tha</div>
+
+      <audio src="./assets/song1.mp3" id="song"></audio>
+
+      <input type="range" id="music-progress" />
+
+      <div id="music-control">
+        <i class="fa-solid fa-backward-step"></i>
+        <i class="fa-solid fa-backward"></i>
+        <i class="fa-solid fa-play" id="play-pause"></i>
+        <i class="fa-solid fa-forward"></i>
+        <i class="fa-solid fa-forward-step"></i>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/2c7db289f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

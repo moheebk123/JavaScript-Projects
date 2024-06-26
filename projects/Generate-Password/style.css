@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 20px;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  gap: 1em;
+  background: #002339;
+}
+h1,
+span {
+  font-size: 35px;
+  padding: 0;
+}
+.display {
+  padding: 15px 30px;
+  background: white;
+  width: fit-content;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #aaa;
+}
+i,
+span {
+  color: limegreen;
+}
+button {
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
+  background: limegreen;
+  padding: 15px 25px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+button,
+i {
+  margin-right: 8px;
+  cursor: pointer;
+}
+.paste-password {
+  padding: 15px 30px;
+  width: fit-content;
+}
+#paste-password {
+  margin-top: 20px;
+  font-size: 30px;
+  padding: 20px;
+  border-top: 1px solid #fff;
+}
+@media screen and (width <= 768px) {
+  #paste-password,
+  h1,
+  span,
+  input,
+  button {
+    font-size: 20px;
+  }
+  .display {
+    width: 320px;
+    padding: 10px;
+  }
+  button,
+  i {
+    margin-right: 0;
+  }
+}
