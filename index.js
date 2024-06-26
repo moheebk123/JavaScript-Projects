@@ -44,8 +44,7 @@ const getProjects = async () => {
     projects.forEach((project) => {
       const { title, description } = project;
       const imgUrl = `./assets/${title}.png`;
-      const codeLink = `https://github.com/moheebk123/JavaScript
-      -Projects/tree/main/projects/${title}`;
+      const codeLink = `https://github.com/moheebk123/JavaScript-Projects/tree/main/projects/${title}`;
       const liveLink = `./projects/${title}/`;
       const card = cardHTML(title, description, imgUrl, codeLink, liveLink);
       container.insertAdjacentHTML("beforeend", card);
