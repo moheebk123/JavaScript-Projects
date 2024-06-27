@@ -6,9 +6,12 @@
 }
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   place-content: center;
+  overflow-x: hidden;
+  background: #002339ec;
+  background-repeat: no-repeat;
 
   @media screen and (width <= 768px) {
     place-content: unset;
@@ -21,7 +24,9 @@ body {
     height: 80vh;
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.104) 0px 50px 100px -20px,
+      rgba(255, 255, 255, 0.115) 0px 30px 60px -30px;
     background: #666;
     background-image: url(./assets/netherlands.jpg);
     background-blend-mode: multiply;
@@ -29,11 +34,23 @@ body {
     background-position: center;
     background-size: 100% 100%;
     position: relative;
+    margin-inline: auto;
     transition: 0.5s ease-in;
 
+    @media screen and(width<=1500px) {
+      width: 90vw;
+      height: 90vh;
+    }
+
+    @media screen and (width <= 1130px) {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
     @media screen and (width <= 768px) {
-      width: 98%;
-      height: 50%;
+      height: 50vh;
+      width: 95vw;
     }
 
     & #content {
@@ -67,6 +84,10 @@ body {
       & h1 {
         font-size: 3em;
 
+        @media screen and (width <= 1500px) {
+          font-size: 2.5em;
+        }
+
         @media screen and (width <= 768px) {
           font-size: 1.3em;
         }
@@ -75,8 +96,13 @@ body {
       & p {
         font-size: 1.5em;
 
+        @media screen and (width <= 1500px) {
+          font-size: 1.2em;
+        }
+
         @media screen and (width <= 768px) {
           font-size: 1em;
+          width: 150%;
         }
       }
 
@@ -88,6 +114,12 @@ body {
         border: none;
         outline: none;
         cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: #ddd;
+          transform: scale(1.07);
+        }
 
         @media screen and (width <= 768px) {
           padding: 0.3em 1.5em;
@@ -107,14 +139,23 @@ body {
       bottom: 30%;
       right: -9%;
 
+      @media screen and (width <= 1500px) {
+        right: -5%;
+      }
+
+      @media screen and (width <= 1130px) {
+        position: static;
+        align-self: center;
+      }
+
       @media screen and (width <= 768px) {
-        bottom: -100%;
-        top: unset;
-        left: 0;
-        right: unset;
-        height: 40vh;
-        width: 100%;
-        overflow: hidden;
+        position: absolute;
+        bottom: calc(-100% - 220px);
+        right: initial;
+        left: 50%;
+        transform: translateX(-50%);
+        height: fit-content;
+        column-gap: 1em;
       }
 
       & .imageslider {
@@ -125,11 +166,25 @@ body {
         background-position: center;
         background-size: 100% 100%;
         cursor: pointer;
-        box-shadow: rgba(179, 179, 179, 0.56) 0px 22px 70px 4px;
+        box-shadow: rgba(210, 210, 210, 0.15) 0px 2px 8px;
+
+        @media screen and (width <= 1500px) {
+          height: 250px;
+          width: 200px;
+        }
 
         @media screen and (width <= 768px) {
           height: 200px;
-          width: 300px;
+          width: 120px;
+        }
+
+        @media screen and (width <= 450px) {
+          height: 150px;
+          width: 100px;
+
+          &:last-child {
+            margin-right: 10px;
+          }
         }
 
         &.add {
@@ -145,13 +200,17 @@ body {
     & #controls {
       position: absolute;
       bottom: 1.5em;
-      left: 45%;
-      right: 55%;
+      left: 50%;
+      transform: translateX(-50%);
       width: fit-content;
       display: flex;
       gap: 1em;
 
-      @media screen and (width <= 768px) {
+      @media screen and (width<=1130px) {
+        bottom: 0.5em;
+      }
+
+      @media screen and (width<=768px) {
         bottom: -2.5em;
       }
 
@@ -166,8 +225,19 @@ body {
           rgba(140, 140, 140, 0.12) 0px 4px 6px,
           rgba(140, 140, 140, 0.17) 0px 12px 13px,
           rgba(132, 132, 132, 0.09) 0px -3px 5px;
+        transition: 0.3s ease;
 
-        @media screen and (width <= 768px) {
+        &:hover {
+          transform: scale(1.04);
+          background-color: #ddd;
+        }
+
+        &:active {
+          background-color: #fff;
+          transform: scale(1);
+        }
+
+        @media screen and (width<=1130px) {
           font-size: 1em;
         }
       }
@@ -178,18 +248,20 @@ body {
 @keyframes add-slide {
   from {
     width: 0;
+    opacity: 0;
   }
   to {
-    width: 250px;
+    opacity: 1;
   }
 }
 
 @keyframes remove-slide {
   from {
-    width: 250px;
+    opacity: 1;
   }
   to {
     width: 0;
+    opacity: 0;
   }
 }
 
