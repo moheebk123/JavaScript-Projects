@@ -9,7 +9,6 @@ const images = [
 ];
 
 let counter = 0;
-let autoChange;
 
 const container = document.getElementById("container");
 const heading = document.getElementById("heading");
@@ -20,8 +19,7 @@ let imageslider = document.querySelectorAll(".imageslider");
 const details = document.querySelectorAll(".details");
 
 const changeSlide = () => {
-  imageslider = document.querySelectorAll(".imageslider");
-
+  let imageslider = document.querySelectorAll(".imageslider");
   const slide = document.createElement("div");
   slide.classList.add("imageslider");
   sliders.appendChild(slide);
@@ -59,17 +57,20 @@ const changeSlide = () => {
   }
 };
 
+autoChange = setInterval(changeSlide, 10000);
+
 rightButton.addEventListener("click", () => {
   clearInterval(autoChange);
   changeSlide();
   setTimeout(() => {
-    autoChange = setInterval(changeSlide, 3000);
+    autoChange = setInterval(changeSlide, 10000);
   }, 5000);
 });
 
 leftButton.addEventListener("click", () => {
   clearInterval(autoChange);
-  imageslider = document.querySelectorAll(".imageslider");
+
+  let imageslider = document.querySelectorAll(".imageslider");
 
   const slide = document.createElement("div");
   slide.classList.add("imageslider");
@@ -114,8 +115,6 @@ leftButton.addEventListener("click", () => {
   }
 
   setTimeout(() => {
-    autoChange = setInterval(changeSlide, 3000);
+    autoChange = setInterval(changeSlide, 10000);
   }, 5000);
 });
-
-autoChange = setInterval(changeSlide, 4000);

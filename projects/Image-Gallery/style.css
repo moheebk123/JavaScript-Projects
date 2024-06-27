@@ -165,7 +165,6 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
-        cursor: pointer;
         box-shadow: rgba(210, 210, 210, 0.15) 0px 2px 8px;
 
         @media screen and (width <= 1500px) {
