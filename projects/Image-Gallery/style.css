@@ -10,7 +10,7 @@ body {
   display: grid;
   place-content: center;
   overflow-x: hidden;
-  background: #002339ec;
+  background: #002339;
   background-repeat: no-repeat;
 
   @media screen and (width <= 768px) {
