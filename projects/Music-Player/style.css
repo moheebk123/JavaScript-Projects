@@ -17,7 +17,7 @@ body {
     background: #fee5e7;
     border-radius: 5px;
     padding: 2.5em 2em;
-    width: 375px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,23 +99,57 @@ body {
       text-align: center;
     }
 
-    & #music-progress {
-      appearance: initial;
-      -webkit-appearance: none;
-      height: 6px;
-      background: #f53192;
-      border-radius: 5px;
-      cursor: pointer;
-      box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+    & .range-box {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
 
-      &::-webkit-slider-thumb {
+      & input {
+        appearance: initial;
         -webkit-appearance: none;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #f53192;
-        border: 5px solid #fff;
+        outline: none;
+        border: none;
+        height: 6px;
+        background: #f53192;
+        border-radius: 5px;
+        cursor: pointer;
         box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #f53192;
+          border: 5px solid #fff;
+          box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+        }
+
+        &#music-progress {
+          width: 100%;
+        }
+
+        &#sound-progress {
+          position: absolute;
+          top: -75px;
+          left: -42px;
+          display: none;
+          opacity: 0;
+          width: 0;
+          transform: rotate(-90deg);
+          transition: 0.3s ease;
+
+          &.active {
+            opacity: 1;
+            display: block;
+            width: initial;
+          }
+        }
+      }
+
+      & .sound-box {
+        position: relative;
       }
     }
 

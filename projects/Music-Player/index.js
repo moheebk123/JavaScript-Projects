@@ -1,4 +1,5 @@
 const musicProgress = document.getElementById("music-progress");
+const soundProgress = document.getElementById("sound-progress");
 const song = document.getElementById("song");
 const musicControl = document.getElementById("music-control");
 const menu = document.getElementById("menu");
@@ -6,6 +7,7 @@ const musicList = document.getElementById("music-list");
 const musicName = document.getElementById("music-name");
 const musicImage = document.querySelector("img");
 const playPauseBtn = document.getElementById("play-pause");
+const volumeBtn = document.getElementById("volume-btn");
 
 song.pause();
 
@@ -16,10 +18,14 @@ const musicData = () => {
 };
 
 musicProgress.onchange = () => {
-  playPause.classList.remove("fa-play");
-  playPause.classList.add("fa-pause");
+  playPauseBtn.classList.remove("fa-play");
+  playPauseBtn.classList.add("fa-pause");
   song.currentTime = musicProgress.value;
   song.play();
+};
+
+soundProgress.oninput = () => {
+  song.volume = soundProgress.value / 100;
 };
 
 const navigation = () => {
@@ -30,7 +36,6 @@ const navigation = () => {
     event.target.classList.add("fa-xmark");
     playPauseBtn.classList.remove("fa-pause");
     playPauseBtn.classList.add("fa-play");
-    // musicData();
     song.pause();
   } else {
     menu.style.transform = "rotate(0)";
@@ -39,7 +44,6 @@ const navigation = () => {
     event.target.classList.add("fa-bars");
     playPauseBtn.classList.remove("fa-play");
     playPauseBtn.classList.add("fa-pause");
-    // musicData();
     song.play();
   }
 };
@@ -117,6 +121,14 @@ const musicControls = () => {
     }
   }
 };
+
+volumeBtn.addEventListener("click", () => {
+  if (soundProgress.classList.contains("active")) {
+    soundProgress.classList.remove("active");
+  } else {
+    soundProgress.classList.add("active");
+  }
+});
 
 musicControl.addEventListener("click", musicControls);
 

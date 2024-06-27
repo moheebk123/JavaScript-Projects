@@ -23,7 +23,14 @@
 
       <audio src="./assets/song1.mp3" id="song"></audio>
 
-      <input type="range" id="music-progress" />
+      <div class="range-box">
+        <input type="range" value="0" id="music-progress" />
+
+        <div class="sound-box">
+          <input type="range" min="0" max="100" value="100" id="sound-progress" />
+          <i class="fa-solid fa-volume-high" id="volume-btn"></i>
+        </div>
+      </div>
 
       <div id="music-control">
         <i class="fa-solid fa-backward-step"></i>
