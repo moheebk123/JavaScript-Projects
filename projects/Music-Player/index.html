@@ -11,8 +11,11 @@
       <i class="fa-solid fa-bars" id="menu"></i>
 
       <div id="music-list">
-        <div class="music">Mujhe Pyaar Hua Tha</div>
+        <div class="music" id="sample-music">Mujhe Pyaar Hua Tha</div>
         <div class="music">Mere Humsafar</div>
+
+        <input type="file" id="upload-file" accept=".mp3" />
+        <button id="upload-music">Upload Music</button>
       </div>
 
       <div class="music-image">
@@ -21,13 +24,21 @@
 
       <div id="music-name">Mujhe Pyaar Hua Tha</div>
 
-      <audio src="./assets/song1.mp3" id="song"></audio>
+      <audio src="./assets/song.mp3" id="song"></audio>
 
-      <div class="range-box">
+      <div class="music-box">
+        <i class="fa-solid fa-arrows-up-to-line" id="play-type"></i>
+
         <input type="range" value="0" id="music-progress" />
 
         <div class="sound-box">
-          <input type="range" min="0" max="100" value="100" id="sound-progress" />
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            id="sound-progress"
+          />
           <i class="fa-solid fa-volume-high" id="volume-btn"></i>
         </div>
       </div>

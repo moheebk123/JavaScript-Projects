@@ -1,6 +1,6 @@
 const musicProgress = document.getElementById("music-progress");
 const soundProgress = document.getElementById("sound-progress");
-const song = document.getElementById("song");
+let song = document.getElementById("song");
 const musicControl = document.getElementById("music-control");
 const menu = document.getElementById("menu");
 const musicList = document.getElementById("music-list");
@@ -8,8 +8,27 @@ const musicName = document.getElementById("music-name");
 const musicImage = document.querySelector("img");
 const playPauseBtn = document.getElementById("play-pause");
 const volumeBtn = document.getElementById("volume-btn");
+const playType = document.getElementById("play-type");
+const fileUpload = document.getElementById("upload-file");
+const uploadMusic = document.getElementById("upload-music");
+let musics = document.querySelectorAll(".music");
 
-song.pause();
+let musicFiles = [];
+let musicNames = [];
+
+const playTypes = [
+  "fa-arrows-up-to-line",
+  "fa-repeat",
+  "fa-rotate",
+  "fa-shuffle",
+];
+
+let currPlayType = 0;
+
+// const music = new Audio()
+// music.src = storedMusics[0]
+// console.log(music)
+// music.play()
 
 const musicData = () => {
   musicProgress.max = song.duration;
@@ -34,52 +53,75 @@ const navigation = () => {
     musicList.style.left = 0;
     event.target.classList.remove("fa-bars");
     event.target.classList.add("fa-xmark");
-    playPauseBtn.classList.remove("fa-pause");
-    playPauseBtn.classList.add("fa-play");
-    song.pause();
   } else {
     menu.style.transform = "rotate(0)";
     musicList.style.left = "-235px";
     event.target.classList.remove("fa-xmark");
     event.target.classList.add("fa-bars");
-    playPauseBtn.classList.remove("fa-play");
-    playPauseBtn.classList.add("fa-pause");
-    song.play();
   }
 };
 
-const changeMusic = () => {
-  if (event.target.innerText == "Mujhe Pyaar Hua Tha") {
-    menu.style.transform = "rotate(0)";
-    menu.classList.remove("fa-xmark");
-    menu.classList.add("fa-bars");
-    musicList.style.left = "-235px";
+const changePlayType = () => {
+  playTypes.forEach((type) => playType.classList.remove(type));
+  if (currPlayType < playTypes.length - 1) {
+    currPlayType++;
+    playType.classList.add(playTypes[currPlayType]);
+  } else if (currPlayType == playTypes.length - 1) {
+    currPlayType = 0;
+    playType.classList.add(playTypes[currPlayType]);
+  }
+};
+
+const addMusic = () => {
+  let newMusicName = fileUpload.files[0].name;
+  newMusicName = newMusicName.substr(0, newMusicName.length - 4);
+  if (!musicNames.includes(newMusicName)) {
+    musicFiles.push(URL.createObjectURL(fileUpload.files[0]));
+    musicNames.push(newMusicName);
+
+    musicName.innerText = musicNames[musicNames.length - 1];
+    song.src = musicFiles[musicFiles.length - 1];
+    musicData()
+
+    if ((musicImage.src = "./assets/image2.jpg")) {
+      musicImage.src = "./assets/image1.jpg";
+    } else {
+      musicImage.src = "./assets/image2.jpg";
+    }
+
+    musicNames.forEach((music, index) => {
+      const musicHTML = `<div class="music" id="${index}">${music}</div>`;
+      musicList.insertAdjacentHTML("beforeend", musicHTML);
+    });
+    musics = document.querySelectorAll(".music");
+  } else {
+    alert("Already uploaded choose another.");
+  }
+};
+
+const changeMusic = (event) => {
+  menu.style.transform = "rotate(0)";
+  menu.classList.remove("fa-xmark");
+  menu.classList.add("fa-bars");
+  musicList.style.left = "-235px";
+  if (event.target.id == "sample-music") {
     musicName.innerText = event.target.innerText;
     musicImage.src = "./assets/image2.jpg";
+    song.src = "./assets/song.mp3";
+  } else {
+    const index = Number(event.target.id);
+    musicName.innerText = musicNames[index];
+    song.src = musicFiles[index];
 
-    song.src = "./assets/song1.mp3";
-
-    playPauseBtn.classList.remove("fa-play");
-    playPauseBtn.classList.add("fa-pause");
-
-    musicData();
-    song.play();
-  } else if (event.target.innerText == "Mere Humsafar") {
-    menu.style.transform = "rotate(0)";
-    menu.classList.remove("fa-xmark");
-    menu.classList.add("fa-bars");
-    musicList.style.left = "-235px";
-    musicName.innerText = event.target.innerText;
-    musicImage.src = "./assets/image1.jpg";
-
-    song.src = "./assets/song2.mp3";
-
-    playPauseBtn.classList.remove("fa-play");
-    playPauseBtn.classList.add("fa-pause");
-
-    musicData();
-    song.play();
+    if ((musicImage.src = "./assets/image2.jpg")) {
+      musicImage.src = "./assets/image1.jpg";
+    } else {
+      musicImage.src = "./assets/image2.jpg";
+    }
   }
+  playPauseBtn.classList.remove("fa-pause");
+  playPauseBtn.classList.add("fa-play");
+  musicData();
 };
 
 const musicControls = () => {
@@ -113,7 +155,7 @@ const musicControls = () => {
     if (musicName.innerText == "Mere Humsafar") {
       musicName.innerText = "Mujhe Pyaar Hua Tha";
       musicImage.src = "./assets/image2.jpg";
-      song.src = "./assets/song1.mp3";
+      song.src = "./assets/song.mp3";
       playPauseBtn.classList.remove("fa-play");
       playPauseBtn.classList.add("fa-pause");
       musicData();
@@ -137,3 +179,17 @@ menu.addEventListener("click", navigation);
 musicList.addEventListener("click", changeMusic);
 
 song.addEventListener("loadedmetadata", musicData);
+
+song.addEventListener("ended", () => {
+  console.log("ended");
+});
+
+playType.addEventListener("click", changePlayType);
+
+uploadMusic.addEventListener("click", () => fileUpload.click());
+
+fileUpload.addEventListener("change", addMusic);
+
+musics.forEach((music) => {
+  music.addEventListener("click", (event) => changeMusic(event));
+});
