@@ -38,7 +38,6 @@ body {
 
     & #music-list {
       padding: 10px;
-      padding-bottom: 60px;
       width: 230px;
       height: 100%;
       background: rgba(255, 255, 255, 0.5);
@@ -52,7 +51,8 @@ body {
       z-index: 10;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: flex-start;
+      align-items: center;
       gap: 1em;
       transition: 0.3s ease;
       overflow-x: hidden;
@@ -71,6 +71,14 @@ body {
         -moz-border-radius: 15px;
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
+      }
+
+      & #user-musics {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+        padding-inline: 5px;
       }
 
       & .music {
@@ -92,8 +100,8 @@ body {
       }
 
       & button {
-        position: absolute;
-        bottom: 10px;
+        position: sticky;
+        top: 5px;
         width: calc(100% - 20px);
         padding: 10px;
         font-weight: 600;

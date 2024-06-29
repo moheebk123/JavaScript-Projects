@@ -15,6 +15,7 @@ let musics = document.querySelectorAll(".music");
 
 let musicFiles = [];
 let musicNames = [];
+let musicIndex;
 
 const playTypes = [
   "fa-arrows-up-to-line",
@@ -24,11 +25,6 @@ const playTypes = [
 ];
 
 let currPlayType = 0;
-
-// const music = new Audio()
-// music.src = storedMusics[0]
-// console.log(music)
-// music.play()
 
 const musicData = () => {
   musicProgress.max = song.duration;
@@ -72,6 +68,14 @@ const changePlayType = () => {
   }
 };
 
+const changeImage = () => {
+  if ((musicImage.src = "./assets/image2.jpg")) {
+    musicImage.src = "./assets/image1.jpg";
+  } else {
+    musicImage.src = "./assets/image2.jpg";
+  }
+};
+
 const addMusic = () => {
   let newMusicName = fileUpload.files[0].name;
   newMusicName = newMusicName.substr(0, newMusicName.length - 4);
@@ -80,18 +84,17 @@ const addMusic = () => {
     musicNames.push(newMusicName);
 
     musicName.innerText = musicNames[musicNames.length - 1];
+    musicName.className = String(musicNames.length - 1)
     song.src = musicFiles[musicFiles.length - 1];
-    musicData()
+    musicData();
 
-    if ((musicImage.src = "./assets/image2.jpg")) {
-      musicImage.src = "./assets/image1.jpg";
-    } else {
-      musicImage.src = "./assets/image2.jpg";
-    }
+    changeImage();
 
+    const userMusics = musicList.querySelector('#user-musics')
+    userMusics.innerHTML = ""
     musicNames.forEach((music, index) => {
       const musicHTML = `<div class="music" id="${index}">${music}</div>`;
-      musicList.insertAdjacentHTML("beforeend", musicHTML);
+      userMusics.insertAdjacentHTML("beforeend", musicHTML);
     });
     musics = document.querySelectorAll(".music");
   } else {
@@ -106,25 +109,23 @@ const changeMusic = (event) => {
   musicList.style.left = "-235px";
   if (event.target.id == "sample-music") {
     musicName.innerText = event.target.innerText;
+    musicName.className = "sample-music";
     musicImage.src = "./assets/image2.jpg";
     song.src = "./assets/song.mp3";
   } else {
-    const index = Number(event.target.id);
-    musicName.innerText = musicNames[index];
+    const index = event.target.id;
+    musicName.innerText = musicNames[Number(index)];
+    musicName.className = index;
     song.src = musicFiles[index];
 
-    if ((musicImage.src = "./assets/image2.jpg")) {
-      musicImage.src = "./assets/image1.jpg";
-    } else {
-      musicImage.src = "./assets/image2.jpg";
-    }
+    changeImage();
   }
   playPauseBtn.classList.remove("fa-pause");
   playPauseBtn.classList.add("fa-play");
   musicData();
 };
 
-const musicControls = () => {
+const musicControls = (event) => {
   if (event.target.classList.contains("fa-play")) {
     setInterval(() => (musicProgress.value = song.currentTime), 500);
 
@@ -142,25 +143,53 @@ const musicControls = () => {
     song.currentTime += 10;
     musicProgress.value = song.currentTime;
   } else if (event.target.classList.contains("fa-forward-step")) {
-    if (musicName.innerText == "Mujhe Pyaar Hua Tha") {
-      musicName.innerText = "Mere Humsafar";
-      musicImage.src = "./assets/image1.jpg";
-      song.src = "./assets/song2.mp3";
-      playPauseBtn.classList.remove("fa-play");
-      playPauseBtn.classList.add("fa-pause");
-      musicData();
-      song.play();
+    if (musicName.className == "sample-music" && musicNames.length > 0) {
+      song.src = musicFiles[0];
+      musicName.innerText = musicNames[0];
+      musicName.className = "0";
+    } else {
+      let curMusicIndex = Number(musicName.className);
+      if (curMusicIndex < musicNames.length - 1) {
+        curMusicIndex++;
+        song.src = musicFiles[curMusicIndex];
+        musicName.innerText = musicNames[curMusicIndex];
+        musicName.className = String(curMusicIndex);
+      } else if (curMusicIndex == musicNames.length - 1) {
+        song.src = "./assets/song.mp3";
+        musicName.innerText = "Mujhe Pyaar Hua Tha";
+        musicName.className = "sample-music";
+      }
     }
+    changeImage();
+    musicData();
+    song.play();
+    playPauseBtn.classList.remove("fa-play");
+    playPauseBtn.classList.add("fa-pause");
+    setInterval(() => (musicProgress.value = song.currentTime), 500);
   } else if (event.target.classList.contains("fa-backward-step")) {
-    if (musicName.innerText == "Mere Humsafar") {
-      musicName.innerText = "Mujhe Pyaar Hua Tha";
-      musicImage.src = "./assets/image2.jpg";
-      song.src = "./assets/song.mp3";
-      playPauseBtn.classList.remove("fa-play");
-      playPauseBtn.classList.add("fa-pause");
-      musicData();
-      song.play();
+    if (musicName.className == "sample-music" && musicNames.length > 0) {
+      song.src = musicFiles[musicFiles.length - 1];
+      musicName.innerText = musicNames[musicNames.length - 1];
+      musicName.className = String(musicNames.length - 1);
+    } else {
+      let curMusicIndex = Number(musicName.className);
+      if (curMusicIndex == 0) {
+        song.src = "./assets/song.mp3";
+        musicName.innerText = "Mujhe Pyaar Hua Tha";
+        musicName.className = "sample-music";
+      } else if (curMusicIndex > 0) {
+        curMusicIndex--;
+        song.src = musicFiles[curMusicIndex];
+        musicName.innerText = musicNames[curMusicIndex];
+        musicName.className = String(curMusicIndex);
+      }
     }
+    changeImage();
+    musicData();
+    song.play();
+    playPauseBtn.classList.remove("fa-play");
+    playPauseBtn.classList.add("fa-pause");
+    setInterval(() => (musicProgress.value = song.currentTime), 500);
   }
 };
 
