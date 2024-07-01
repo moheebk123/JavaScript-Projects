@@ -73,7 +73,7 @@
   },
   {
     "title": "Image-Gallery",
-    "description": "A main box with a background, heading, paragraph, button, and three image boxes. Navigation buttons update the boxes, and the main box auto-changes every 10 seconds."
+    "description": "A main box with a background, heading, paragraph, button, and three image boxes. Navigation buttons update the boxes and content of the main box."
   },
   {
     "title": "Image-Gallery-Website",
