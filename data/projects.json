@@ -113,7 +113,7 @@
   },
   {
     "title": "Music-Player",
-    "description": "Some changes left. Functional will be Coming Soon."
+    "description": "A complete music player with play, pause, skip track, adjust volume, display playtime, total time, shuffle, repeat modes, upload, delete music, and a clickable music list."
   },
   {
     "title": "Order-Button",
