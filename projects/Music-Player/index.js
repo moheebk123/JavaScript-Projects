@@ -5,26 +5,25 @@ const musicControl = document.getElementById("music-control");
 const menu = document.getElementById("menu");
 const musicList = document.getElementById("music-list");
 const musicName = document.getElementById("music-name");
-const musicImage = document.querySelector("img");
 const playPauseBtn = document.getElementById("play-pause");
 const volumeBtn = document.getElementById("volume-btn");
-const playType = document.getElementById("play-type");
+const playTypeIcon = document.getElementById("play-type-icon");
+const playTypeText = document.getElementById("play-type-text");
 const fileUpload = document.getElementById("upload-file");
 const uploadMusic = document.getElementById("upload-music");
 let musics = document.querySelectorAll(".music");
 
 let musicFiles = [];
 let musicNames = [];
-let musicIndex;
 
-const playTypes = [
+const playTypeIcons = [
   "fa-arrows-up-to-line",
   "fa-repeat",
   "fa-rotate",
   "fa-shuffle",
 ];
 
-let currPlayType = 0;
+let currPlayTypeIcon = 0;
 
 const musicData = () => {
   musicProgress.max = song.duration;
@@ -58,21 +57,94 @@ const navigation = () => {
 };
 
 const changePlayType = () => {
-  playTypes.forEach((type) => playType.classList.remove(type));
-  if (currPlayType < playTypes.length - 1) {
-    currPlayType++;
-    playType.classList.add(playTypes[currPlayType]);
-  } else if (currPlayType == playTypes.length - 1) {
-    currPlayType = 0;
-    playType.classList.add(playTypes[currPlayType]);
+  playTypeIcons.forEach((type) => playTypeIcon.classList.remove(type));
+  if (currPlayTypeIcon < playTypeIcons.length - 1) {
+    currPlayTypeIcon++;
+    playTypeIcon.classList.add(playTypeIcons[currPlayTypeIcon]);
+    if (currPlayTypeIcon == 1) {
+      playTypeText.innerText = "Loop All";
+    } else if (currPlayTypeIcon == 2) {
+      playTypeText.innerText = "Loop Current";
+    } else if (currPlayTypeIcon == 3) {
+      playTypeText.innerText = "Shuffle Play";
+    }
+  } else if (currPlayTypeIcon == playTypeIcons.length - 1) {
+    currPlayTypeIcon = 0;
+    playTypeIcon.classList.add(playTypeIcons[currPlayTypeIcon]);
+    playTypeText.innerText = "Play All";
   }
 };
 
-const changeImage = () => {
-  if ((musicImage.src = "./assets/image2.jpg")) {
-    musicImage.src = "./assets/image1.jpg";
+const playType = () => {
+  if (musicNames.length == 0 && musicFiles.length == 0) {
+    musicData();
+    playPauseBtn.classList.remove("fa-pause");
+    playPauseBtn.classList.add("fa-play");
+    if (currPlayTypeIcon == 1 || currPlayTypeIcon == 2) {
+      song.play();
+      playPauseBtn.classList.remove("fa-play");
+      playPauseBtn.classList.add("fa-pause");
+    }
   } else {
-    musicImage.src = "./assets/image2.jpg";
+    if (currPlayTypeIcon == 0) {
+      if (musicName.className == "sample-music") {
+        musicName.className = "0";
+        musicName.innerText = musicNames[0];
+        song.src = musicFiles[0];
+        musicData();
+        song.play();
+      } else {
+        let curMusicIndex = Number(musicName.className);
+        if (curMusicIndex < musicNames.length - 1) {
+          curMusicIndex++;
+          musicName.className = String(curMusicIndex);
+          musicName.innerText = musicNames[curMusicIndex];
+          song.src = musicFiles[curMusicIndex];
+          musicData();
+          song.play();
+        } else if (curMusicIndex == musicNames.length - 1) {
+          musicName.innerText = "Mujhe Pyaar Hua Tha";
+          musicName.className = "sample-music";
+          song.src = "./assets/song.mp3";
+          musicData();
+          playPauseBtn.classList.remove("fa-pause");
+          playPauseBtn.classList.add("fa-play");
+        }
+      }
+    } else if (currPlayTypeIcon == 1) {
+      if (musicName.className == "sample-music") {
+        musicName.className = "0";
+        musicName.innerText = musicNames[0];
+        song.src = musicFiles[0];
+        musicData();
+        song.play();
+      } else {
+        let curMusicIndex = Number(musicName.className);
+        if (curMusicIndex < musicNames.length - 1) {
+          curMusicIndex++;
+          musicName.className = String(curMusicIndex);
+          musicName.innerText = musicNames[curMusicIndex];
+          song.src = musicFiles[curMusicIndex];
+          musicData();
+          song.play();
+        } else if (curMusicIndex == musicNames.length - 1) {
+          musicName.innerText = "Mujhe Pyaar Hua Tha";
+          musicName.className = "sample-music";
+          song.src = "./assets/song.mp3";
+          musicData();
+          song.play();
+        }
+      }
+    } else if (currPlayTypeIcon == 2) {
+      song.play();
+    } else if (currPlayTypeIcon == 3) {
+      const curMusicIndex = Math.floor(Math.random() * musicFiles.length);
+      musicName.className = String(curMusicIndex);
+      musicName.innerText = musicNames[curMusicIndex];
+      song.src = musicFiles[curMusicIndex];
+      musicData();
+      song.play();
+    }
   }
 };
 
@@ -84,14 +156,12 @@ const addMusic = () => {
     musicNames.push(newMusicName);
 
     musicName.innerText = musicNames[musicNames.length - 1];
-    musicName.className = String(musicNames.length - 1)
+    musicName.className = String(musicNames.length - 1);
     song.src = musicFiles[musicFiles.length - 1];
     musicData();
 
-    changeImage();
-
-    const userMusics = musicList.querySelector('#user-musics')
-    userMusics.innerHTML = ""
+    const userMusics = musicList.querySelector("#user-musics");
+    userMusics.innerHTML = "";
     musicNames.forEach((music, index) => {
       const musicHTML = `<div class="music" id="${index}">${music}</div>`;
       userMusics.insertAdjacentHTML("beforeend", musicHTML);
@@ -110,15 +180,12 @@ const changeMusic = (event) => {
   if (event.target.id == "sample-music") {
     musicName.innerText = event.target.innerText;
     musicName.className = "sample-music";
-    musicImage.src = "./assets/image2.jpg";
     song.src = "./assets/song.mp3";
   } else {
     const index = event.target.id;
     musicName.innerText = musicNames[Number(index)];
     musicName.className = index;
     song.src = musicFiles[index];
-
-    changeImage();
   }
   playPauseBtn.classList.remove("fa-pause");
   playPauseBtn.classList.add("fa-play");
@@ -129,6 +196,8 @@ const musicControls = (event) => {
   if (event.target.classList.contains("fa-play")) {
     setInterval(() => (musicProgress.value = song.currentTime), 500);
 
+    musicProgress.value = song.currentTime;
+    song.currentTime = musicProgress.value;
     song.play();
     event.target.classList.remove("fa-play");
     event.target.classList.add("fa-pause");
@@ -160,7 +229,6 @@ const musicControls = (event) => {
         musicName.className = "sample-music";
       }
     }
-    changeImage();
     musicData();
     song.play();
     playPauseBtn.classList.remove("fa-play");
@@ -184,7 +252,6 @@ const musicControls = (event) => {
         musicName.className = String(curMusicIndex);
       }
     }
-    changeImage();
     musicData();
     song.play();
     playPauseBtn.classList.remove("fa-play");
@@ -209,11 +276,9 @@ musicList.addEventListener("click", changeMusic);
 
 song.addEventListener("loadedmetadata", musicData);
 
-song.addEventListener("ended", () => {
-  console.log("ended");
-});
+song.addEventListener("ended", playType);
 
-playType.addEventListener("click", changePlayType);
+playTypeIcon.addEventListener("click", changePlayType);
 
 uploadMusic.addEventListener("click", () => fileUpload.click());
 

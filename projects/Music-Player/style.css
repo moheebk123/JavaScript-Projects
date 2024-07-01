@@ -118,7 +118,7 @@ body {
           background-color: #f53192;
           cursor: pointer;
         }
-}
+      }
     }
 
     & i {
@@ -161,6 +161,7 @@ body {
       font-weight: 600;
       font-size: 1.5em;
       text-align: center;
+      text-transform: capitalize;
     }
 
     & .music-box {
@@ -172,6 +173,27 @@ body {
       & i {
         color: #fff;
         background-color: #ff68a7;
+      }
+
+      & .play-type-box {
+        position: relative;
+
+        & #play-type-text {
+          width: max-content;
+          position: absolute;
+          z-index: 5;
+          bottom: -25px;
+          left: 50%;
+          transform: translate(-50%);
+          font-size: 11px;
+          padding: 5px;
+          text-align: center;
+          background-color: #fff;
+          box-shadow: 0 3px 3px rgba(255, 26, 26, 0.22);
+          color: #ff68a7;
+          font-weight: 600;
+          border-radius: 5px;
+        }
       }
 
       & input {
