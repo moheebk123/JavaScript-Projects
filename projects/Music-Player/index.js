@@ -10,8 +10,6 @@ const volumeBtn = document.getElementById("volume-btn");
 const playTypeIcon = document.getElementById("play-type-icon");
 const playTypeText = document.getElementById("play-type-text");
 const fileUpload = document.getElementById("upload-file");
-const uploadMusic = document.getElementById("upload-music");
-let musics = document.querySelectorAll(".music");
 const totalDuration = document.getElementById("total-duration");
 const curTime = document.getElementById("current-time");
 
@@ -40,7 +38,6 @@ const musicData = () => {
     const min = Math.floor(curSongTime / 60);
     const sec = (curSongTime % 60).toFixed(0);
     curTime.innerText = `${min}:${sec}`;
-
   }, 500);
 };
 
@@ -176,33 +173,51 @@ const addMusic = () => {
     const userMusics = musicList.querySelector("#user-musics");
     userMusics.innerHTML = "";
     musicNames.forEach((music, index) => {
-      const musicHTML = `<div class="music" id="${index}">${music}</div>`;
+      const musicHTML = `<div class="music" id="${index}">${music} <i class="fa-solid fa-xmark delete-music"></i></div>`;
       userMusics.insertAdjacentHTML("beforeend", musicHTML);
     });
-    musics = document.querySelectorAll(".music");
   } else {
     alert("Already uploaded choose another.");
   }
 };
 
+const deleteMusic = (event) => {
+  const music = event.target.closest(".music");
+  const musicIndex = Number(music.id);
+  musicFiles.splice(musicIndex, 1);
+  musicNames.splice(musicIndex, 1);
+  music.remove();
+};
+
 const changeMusic = (event) => {
-  menu.style.transform = "rotate(0)";
-  menu.classList.remove("fa-xmark");
-  menu.classList.add("fa-bars");
-  musicList.style.left = "-235px";
   if (event.target.id == "sample-music") {
+    menu.style.transform = "rotate(0)";
+    menu.classList.remove("fa-xmark");
+    menu.classList.add("fa-bars");
+    musicList.style.left = "-235px";
     musicName.innerText = event.target.innerText;
     musicName.className = "sample-music";
     song.src = "./assets/song.mp3";
-  } else {
+    playPauseBtn.classList.remove("fa-pause");
+    playPauseBtn.classList.add("fa-play");
+    musicData();
+  } else if (event.target.id == "upload-music") {
+    fileUpload.click();
+  } else if (event.target.classList.contains("music")) {
+    menu.style.transform = "rotate(0)";
+    menu.classList.remove("fa-xmark");
+    menu.classList.add("fa-bars");
+    musicList.style.left = "-235px";
     const index = event.target.id;
     musicName.innerText = musicNames[Number(index)];
     musicName.className = index;
     song.src = musicFiles[index];
+    playPauseBtn.classList.remove("fa-pause");
+    playPauseBtn.classList.add("fa-play");
+    musicData();
+  } else if (event.target.classList.contains("delete-music")) {
+    deleteMusic(event);
   }
-  playPauseBtn.classList.remove("fa-pause");
-  playPauseBtn.classList.add("fa-play");
-  musicData();
 };
 
 const musicControls = (event) => {
@@ -282,18 +297,12 @@ musicControl.addEventListener("click", musicControls);
 
 menu.addEventListener("click", navigation);
 
-musicList.addEventListener("click", changeMusic);
-
 song.addEventListener("loadedmetadata", musicData);
 
 song.addEventListener("ended", playType);
 
 playTypeIcon.addEventListener("click", changePlayType);
 
-uploadMusic.addEventListener("click", () => fileUpload.click());
-
 fileUpload.addEventListener("change", addMusic);
 
-musics.forEach((music) => {
-  music.addEventListener("click", (event) => changeMusic(event));
-});
+musicList.addEventListener("click", changeMusic);

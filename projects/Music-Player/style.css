@@ -88,6 +88,9 @@ body {
         text-transform: capitalize;
         border-radius: 5px;
         transition: 0.3s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         cursor: pointer;
 
         &:hover {
