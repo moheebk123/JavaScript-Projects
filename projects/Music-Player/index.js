@@ -12,6 +12,8 @@ const playTypeText = document.getElementById("play-type-text");
 const fileUpload = document.getElementById("upload-file");
 const uploadMusic = document.getElementById("upload-music");
 let musics = document.querySelectorAll(".music");
+const totalDuration = document.getElementById("total-duration");
+const curTime = document.getElementById("current-time");
 
 let musicFiles = [];
 let musicNames = [];
@@ -29,6 +31,17 @@ const musicData = () => {
   musicProgress.max = song.duration;
   song.currentTime = 0;
   musicProgress.value = song.currentTime;
+  const songDuration = song.duration.toFixed(2);
+  const min = Math.floor(songDuration / 60);
+  const sec = (songDuration % 60).toFixed(0);
+  totalDuration.innerText = `${min}:${sec}`;
+  setInterval(() => {
+    const curSongTime = parseFloat(song.currentTime.toFixed(2));
+    const min = Math.floor(curSongTime / 60);
+    const sec = (curSongTime % 60).toFixed(0);
+    curTime.innerText = `${min}:${sec}`;
+
+  }, 500);
 };
 
 musicProgress.onchange = () => {
@@ -195,9 +208,6 @@ const changeMusic = (event) => {
 const musicControls = (event) => {
   if (event.target.classList.contains("fa-play")) {
     setInterval(() => (musicProgress.value = song.currentTime), 500);
-
-    musicProgress.value = song.currentTime;
-    song.currentTime = musicProgress.value;
     song.play();
     event.target.classList.remove("fa-play");
     event.target.classList.add("fa-pause");

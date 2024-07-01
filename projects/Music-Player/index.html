@@ -32,7 +32,15 @@
           <div id="play-type-text">Play All</div>
         </div>
 
-        <input type="range" value="0" id="music-progress" />
+        <div class="music-progress">
+          <input type="range" value="0" id="music-progress" />
+
+          <div class="song-time">
+            <span id="current-time"></span>
+            <span> / </span>
+            <span id="total-duration"></span>
+          </div>
+        </div>
 
         <div class="sound-box">
           <input
