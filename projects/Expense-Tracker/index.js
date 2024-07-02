@@ -52,16 +52,16 @@ const getActualBalance = () =>
 const setTotalIncome = () =>
   (totalIncome = localStorage.setItem("totalIncome", totalIncome));
 const getTotalIncome = () =>
-  (totalIncome = localStorage.getItem("totalIncome"));
+  (totalIncome = Number(localStorage.getItem("totalIncome")));
 
 const setTotalExpense = () =>
   (totalExpense = localStorage.setItem("totalExpense", totalExpense));
 const getTotalExpense = () =>
-  (totalExpense = localStorage.getItem("totalExpense"));
+  (totalExpense = Number(localStorage.getItem("totalExpense")));
 
 const setCashFlow = () =>
   (cashFlow = localStorage.setItem("cashFlow", cashFlow));
-const getCashFlow = () => (cashFlow = localStorage.getItem("cashFlow"));
+const getCashFlow = () => (cashFlow = Number(localStorage.getItem("cashFlow")));
 
 const setGoal = () => (goal = localStorage.setItem("goal", goalBox.innerHTML));
 const getGoal = () => (goalBox.innerHTML = localStorage.getItem("goal"));
@@ -107,7 +107,7 @@ const calculateCashFlow = () => {
   cashFlow = Number(cashFlow);
   totalExpense = Number(totalExpense);
   totalIncome = Number(totalIncome);
-  cashFlow = totalIncome - totalExpense;
+  cashFlow = (totalIncome - totalExpense);
 };
 
 const fillDetails = () => {
@@ -192,9 +192,7 @@ const goalHTML = (iconHTML, name, savedAmount, goalAmount) => {
   <div class="goal">
     ${iconHTML}
     <div class="goal-name">${name.innerText}</div>
-    <div class="amount">₹
-      <span class="saved-amount">${savedAmount}</span>/ ₹
-      <span class="goal-amount">${goalAmount}</span>
+    <div class="amount">₹<span class="saved-amount">${savedAmount}</span>/ ₹<span class="goal-amount">${goalAmount}</span>
     </div>
     <i class="fa-solid fa-plus add-savings"></i>
     <i class="fa-solid fa-xmark delete-goal"></i>
@@ -268,10 +266,8 @@ const createGoal = () => {
       count = 0;
       goalList.style.display = "none";
       const icon = event.target.closest("div").querySelector("i");
-      console.log(icon);
       icon.classList.add("goal-icon");
       const iconHTML = icon.outerHTML;
-      console.log(iconHTML);
       const name = event.target.closest("div").querySelector("p");
       const goalAmount = prompt("Enter goal amount", 0);
       const savedAmount = prompt("Enter saved amount", 0);
@@ -295,7 +291,6 @@ const addRecord = (recordType) => {
   const recordAmount = Number(
     prompt("Enter the amount you want to record?", 1)
   );
-
   recordCategoryBox.style.display = "block";
   recordCategoryList.addEventListener("click", () => {
     if (count == 1) {
@@ -348,7 +343,6 @@ const addRecord = (recordType) => {
         totalExpense = Number(Number(totalExpense) + Number(recordAmount));
       }
       fillDetails();
-      setData();
     }
   });
 };
@@ -414,7 +408,6 @@ const addTransferRecord = () => {
     }
   }
   fillDetails();
-  setData();
 };
 
 createGoalBtn.addEventListener("click", createGoal);

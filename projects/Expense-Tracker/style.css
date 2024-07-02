@@ -13,7 +13,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   background: #000;
-  padding: 1em 3em;
+  padding: 3em;
   overflow-x: hidden;
 
   @media screen and (width < 768px) {
@@ -36,21 +36,24 @@ body {
     grid-template-rows: repeat(3, 1fr);
     gap: 1em;
     width: 100%;
-    height: 90%;
+    height: 88vh;
 
     @media screen and (width < 1440px) {
       grid-template-columns: repeat(3, 1fr);
+      height: 95vh;
+      margin-bottom: 2em;
     }
 
     @media screen and (width < 1000px) {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(7, 1fr);
+      grid-template-rows: repeat(9, 1fr);
       height: fit-content;
     }
 
     @media screen and (width < 768px) {
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(8, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      margin-bottom: 0;
     }
 
     & .box {
@@ -118,7 +121,8 @@ body {
           padding: 1em;
           display: flex;
           align-items: center;
-          justify-content: space-around;
+          padding: 2em;
+          justify-content: space-between;
           transition: 0.3s ease-in-out;
 
           @media screen and (min-width: 500px) and (max-width: 1440px) {
@@ -315,6 +319,10 @@ body {
         grid-column-end: 2;
         grid-row-start: 3;
         grid-row-end: 4;
+
+        & :is(.income-box, .expense-box, .cash-flow-box, #cash-flow-amount) {
+          font-size: 1.2em;
+        }
       }
 
       @media screen and (width < 1000px) {
@@ -335,10 +343,6 @@ body {
         display: flex;
         justify-content: space-between;
         font-size: 1.5em;
-
-        @media screen and (width < 768px) {
-          font-size: 1.2em;
-        }
       }
 
       & #cash-flow-amount {
@@ -373,13 +377,13 @@ body {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 4;
-        grid-row-end: 6;
+        grid-row-end: 7;
       }
 
       @media screen and (width < 768px) {
         grid-column-end: 2;
         grid-row-start: 5;
-        grid-row-end: 7;
+        grid-row-end: 8;
       }
 
       & #transaction-record {
@@ -440,7 +444,7 @@ body {
       & #record-category-box {
         display: none;
         padding: 1em;
-        position: absolute;
+        position: fixed;
         border-radius: 10px;
         background: #0000009f;
         width: fit-content;
@@ -500,14 +504,14 @@ body {
       @media screen and (width < 1000px) {
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 8;
+        grid-row-start: 7;
+        grid-row-end: 10;
       }
 
       @media screen and (width < 768px) {
         grid-column-end: 2;
-        grid-row-start: 7;
-        grid-row-end: 9;
+        grid-row-start: 8;
+        grid-row-end: 11;
       }
 
       & h2 {
@@ -526,7 +530,7 @@ body {
 
       & #goal-savings {
         margin-block: 0.5em;
-        height: 90%;
+        height: calc(90% - 30px);
         overflow-y: scroll;
         padding-right: 1em;
         border-block: 1px solid #999999c8;
@@ -590,7 +594,7 @@ body {
       & #goal-list {
         display: none;
         padding: 2em;
-        position: absolute;
+        position: fixed;
         border-radius: 10px;
         background: #0000009f;
         width: fit-content;
