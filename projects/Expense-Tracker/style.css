@@ -36,8 +36,6 @@ body {
     right: 1em;
 
     & > i {
-      background-color: #fff;
-      border: 1px solid #fff;
       font-size: 1em;
       cursor: pointer;
     }
