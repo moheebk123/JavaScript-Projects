@@ -30,6 +30,55 @@ body {
     margin-bottom: 1em;
   }
 
+  & > .info-container {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+
+    & > i {
+      background-color: #fff;
+      border: 1px solid #fff;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    & .info-box {
+      color: #000;
+      border-radius: 10px;
+      padding: 12px;
+      width: 250px;
+      z-index: -1;
+      background-color: #ffffff76;
+      box-shadow: rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      backdrop-filter: blur(10px);
+      display: none;
+      transition: display 1s ease;
+
+      &.active {
+        display: block;
+      }
+
+      & button {
+        border-radius: 10px;
+        background-color: #383838;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        transition: 0.3s ease;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #272727;
+        }
+      }
+    }
+  }
+
   & .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

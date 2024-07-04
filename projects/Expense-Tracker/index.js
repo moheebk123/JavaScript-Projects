@@ -12,6 +12,9 @@ const createGoalBtn = document.getElementById("create-goal-btn");
 const recordBox = document.getElementById("transaction-record");
 const recordCategoryBox = document.getElementById("record-category-box");
 const recordCategoryList = document.getElementById("record-category-list");
+const showInfoBtn = document.getElementById("show-info-btn");
+const deleteDataBtn = document.getElementById("delete-data-btn");
+const infoBox = document.querySelector(".info-box");
 
 // Accounts Balance = Cash, Bank, Savings, Investment, Debt
 //Actual Balance = Cash + Bank + Savings + Investment - Debt
@@ -107,7 +110,7 @@ const calculateCashFlow = () => {
   cashFlow = Number(cashFlow);
   totalExpense = Number(totalExpense);
   totalIncome = Number(totalIncome);
-  cashFlow = (totalIncome - totalExpense);
+  cashFlow = totalIncome - totalExpense;
 };
 
 const fillDetails = () => {
@@ -144,7 +147,7 @@ const fillDetails = () => {
 };
 
 const checkDetailsFilled = () => {
-  if (getUserFillDetails() == null) {
+  if (getUserFillDetails()) {
     accountsBalance[0] = Number(
       prompt("Enter the amount do you have in Cash?", 0)
     );
@@ -410,6 +413,22 @@ const addTransferRecord = () => {
   fillDetails();
 };
 
+const showInfo = () => {
+  debugger;
+  if (infoBox.classList.contains("active")) {
+    infoBox.classList.remove("active");
+  } else {
+    infoBox.classList.add("active");
+  }
+};
+
+const deleteData = () => {
+  userFillDetails = false;
+  infoBox.classList.remove("active");
+  setData();
+  checkDetailsFilled();
+};
+
 createGoalBtn.addEventListener("click", createGoal);
 
 goalBox.addEventListener("click", addDeleteGoal);
@@ -423,5 +442,9 @@ addExpenseBtn.addEventListener("click", () => {
 });
 
 transferBtn.addEventListener("click", addTransferRecord);
+
+showInfoBtn.addEventListener("click", showInfo);
+
+deleteDataBtn.addEventListener("click", deleteData);
 
 checkDetailsFilled();
